@@ -12,15 +12,14 @@ if x >= right_wall_x{
 	touching_right_wall = false
 }
 //check if just reached wall
-if(jumping_right and touching_right_wall){
+if((jumping_left and touching_left_wall) or (jumping_right and touching_right_wall)){
+	jumping_left = false
 	jumping_right = false
 	jump_speed_horizontal = jump_speed_horizontal_min
 	vertical_speed = 0
-}
-if(jumping_left and touching_left_wall){
-	jumping_left = false
-	jump_speed_horizontal = jump_speed_horizontal_min
-	vertical_speed = 0
+	attacks_used = 0
+	attacking = false
+	instance_destroy(obj_sword)
 }
 //check if charging jump
 if(keyboard_check(vk_space) and not jumping_left and not jumping_right){
@@ -62,11 +61,13 @@ if(jumping_right or jumping_left){
 	}
 }
 //check if attacking
-if((jumping_left or jumping_right) and keyboard_check_pressed(vk_space) and not attacking){
+if((jumping_left or jumping_right) and keyboard_check_pressed(vk_space) and not attacking and attacks_used < max_attacks){
 	attacking = true
 	alarm[0] = attack_duration
 	curr_sword = instance_create_depth(x, y, -100, obj_sword)
-	y = y - (vertical_speed / attack_slowdown_coefficient)
-	vertical_speed = vertical_speed - (jump_gravity / attack_slowdown_coefficient)
+	attacks_used += 1
+	if(vertical_speed > 0){
+		vertical_speed = 0
+	}
 }
 
