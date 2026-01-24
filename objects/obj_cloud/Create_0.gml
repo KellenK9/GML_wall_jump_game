@@ -3,11 +3,13 @@
 
 depth = 99
 
-x_speed = random(0.1) + 0.05
-y_speed = 0.1
-y = random(100)
+image_index = irandom(36)
 
-if(random(2) > 1){
+x_speed = random(0.2) + 0.1
+y_speed = 0.05
+y = random(100) - 20
+
+if(random(100) > 50){
 	moving_right = true
 	x = obj_left_wall.x - sprite_width
 }
