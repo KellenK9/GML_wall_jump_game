@@ -1,0 +1,23 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+left_wall_x = obj_left_wall.x + (sprite_width/2)
+right_wall_x = obj_right_wall.x - (sprite_width/2)
+x = left_wall_x
+
+touching_left_wall = true
+touching_right_wall = false
+jumping_right = false
+jumping_left = false
+
+jump_speed_horizontal_min = 2
+jump_speed_horizontal = jump_speed_horizontal_min
+jump_speed_horizontal_max = 3
+jump_charge_speed = 0.05
+jump_vertical_speed = 3
+jump_gravity = 0.1
+vertical_speed = 0
+
+attacking = false
+attack_slowdown_coefficient = 2
+attack_duration = 20
