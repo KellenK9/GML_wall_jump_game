@@ -1,3 +1,3 @@
 /// create_cloud
 
-instance_create_depth(0, 0, 500, obj_cloud)
+instance_create_depth(room_width/2, 50, 500, obj_cloud)

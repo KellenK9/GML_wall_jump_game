@@ -6,3 +6,4 @@ if(moving_right){
 }else{
 	x = x - x_speed
 }
+y = y + y_speed
