@@ -4,7 +4,11 @@
 //Destroy when attacked - Add to all enemies
 if(obj_player.attacking and distance_to_point(obj_player.x, obj_player.y) < global.attack_radius){
 	obj_player.attacks_used = 0 // defeating an enemy resets your attack counter
-	global.score += 200
+	if(sprite_index = spr_bird2){
+		global.score += 100
+	}else{
+		global.score += 500
+	}
 	instance_destroy(self)
 }
 

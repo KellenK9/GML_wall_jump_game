@@ -13,7 +13,7 @@ if(alarm[3] < 0){
 	alarm[3] = 600 + random(60)
 }
 if(alarm[4] < 0){
-	alarm[4] = 400 + random(300)
+	alarm[4] = 200 + random(300)
 }
 
 if(global.game_over and keyboard_check_pressed(vk_space)){

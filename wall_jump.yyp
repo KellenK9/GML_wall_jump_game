@@ -49,6 +49,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_bird1_flying","path":"sprites/spr_bird1_flying/spr_bird1_flying.yy",},},
     {"id":{"name":"spr_bird1","path":"sprites/spr_bird1/spr_bird1.yy",},},
+    {"id":{"name":"spr_bird2","path":"sprites/spr_bird2/spr_bird2.yy",},},
     {"id":{"name":"spr_cloud","path":"sprites/spr_cloud/spr_cloud.yy",},},
     {"id":{"name":"spr_coin","path":"sprites/spr_coin/spr_coin.yy",},},
     {"id":{"name":"spr_ninja_blue_idle","path":"sprites/spr_ninja_blue_idle/spr_ninja_blue_idle.yy",},},

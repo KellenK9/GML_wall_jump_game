@@ -1,7 +1,7 @@
 /// 
 
 if(place_meeting(x, y, obj_player)){
-	global.score += 100
+	global.score += 200
 	instance_destroy(self)
 }
 
