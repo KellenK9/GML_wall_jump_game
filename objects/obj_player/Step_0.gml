@@ -127,4 +127,35 @@ if(place_meeting(x, y, obj_tree) and not jumping_right and not jumping_left){
 			}
 		}
 	}
+}else{
+	// Tree collision while jumping
+	if(place_meeting(x, y, obj_tree)){
+		//Bounce off tree if coming at side
+		if(jumping_left and not place_meeting(x + 8, y, obj_tree)){
+			jumping_left = false
+			jumping_right = true
+			vertical_speed = jump_vertical_bounce_speed
+			attacks_used = 0
+		}
+		if(jumping_right and not place_meeting(x - 8, y, obj_tree)){
+			jumping_right = false
+			jumping_left = true
+			vertical_speed = jump_vertical_bounce_speed
+			attacks_used = 0
+		}
+		// if right above tree, bounce
+		if(not place_meeting(x, y - 8, obj_tree)){
+			vertical_speed = jump_vertical_bounce_speed
+			attacks_used = 0
+		}
+		// if right below a tree, move character down
+		if(place_meeting(x, y, obj_tree) and not place_meeting(x, y + 8, obj_tree)){
+			for(var _i = 0; _i < 8; _i+=0.1){
+				if(place_meeting(x, y + _i, obj_tree)){
+					y = y + 0.1
+				}
+			}
+		}
+	}
 }
+//Destroy tree if hit with sword?

@@ -15,6 +15,7 @@ jump_speed_horizontal = jump_speed_horizontal_min
 jump_speed_horizontal_max = 3
 jump_charge_speed = 0.05
 jump_vertical_speed = 3
+jump_vertical_bounce_speed = 1
 jump_gravity = 0.1
 vertical_speed = 0
 jump_rotation_speed = 4
