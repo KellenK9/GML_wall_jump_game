@@ -77,10 +77,13 @@ if((jumping_left or jumping_right) and y < sprite_height/2 and vertical_speed > 
 	vertical_speed = 0
 }
 //lose when below screen
-if(y > room_height - (sprite_height/2)){
+if(y > room_height + (sprite_height/2)){
 	global.game_over = true
 }
 //Dictate appearance
+if(jumping_left or jumping_right){
+	jump_rotation_speed = 1.4 * jump_speed_horizontal
+}
 if(touching_left_wall){
 	image_angle = 270
 	image_xscale = -1
@@ -93,11 +96,15 @@ if(touching_right_wall){
 }
 if(jumping_right){
 	sprite_index = spr_ninja_blue_idle
-	image_angle = image_angle - jump_rotation_speed
+	if(not attacking){
+		image_angle = image_angle - jump_rotation_speed
+	}
 }
 if(jumping_left){
 	sprite_index = spr_ninja_blue_idle
-	image_angle = image_angle + jump_rotation_speed
+	if(not attacking){
+		image_angle = image_angle + jump_rotation_speed
+	}
 }
 else{
 	sprite_index = spr_ninja_blue_run
