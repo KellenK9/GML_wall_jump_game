@@ -70,4 +70,8 @@ if((jumping_left or jumping_right) and keyboard_check_pressed(vk_space) and not 
 		vertical_speed = 0
 	}
 }
+//bump head on top of screen
+if((jumping_left or jumping_right) and y < sprite_height/2 and vertical_speed > 0){
+	vertical_speed = 0
+}
 
