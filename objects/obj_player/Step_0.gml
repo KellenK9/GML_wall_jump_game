@@ -149,12 +149,14 @@ if(place_meeting(x, y, obj_tree) and not jumping_right and not jumping_left){
 			attacks_used = 0
 		}
 		// if right below a tree, move character down
-		if(place_meeting(x, y, obj_tree) and not place_meeting(x, y + 8, obj_tree)){
+		if(place_meeting(x, y, obj_tree) and (not place_meeting(x, y + 16, obj_tree) or not place_meeting(x + 8, y + 8, obj_tree) or not place_meeting(x - 8, y + 8, obj_tree)) and place_meeting(x, y - 8, obj_tree) and place_meeting(x + 4, y - 4, obj_tree) and place_meeting(x - 4, y - 4, obj_tree)){
 			for(var _i = 0; _i < 8; _i+=0.1){
 				if(place_meeting(x, y + _i, obj_tree)){
 					y = y + 0.1
 				}
 			}
+			jump_speed_horizontal = jump_speed_horizontal * 0.8
+			vertical_speed = vertical_speed * 0.8
 		}
 	}
 }
