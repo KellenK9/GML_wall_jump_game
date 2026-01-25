@@ -12,3 +12,7 @@ if(x > room_width + sprite_width + 200){
 if(x < 0 - sprite_width - 200){
 	instance_destroy(self)
 }
+
+if(place_meeting(x, y, obj_sword)){
+	instance_destroy(self)
+}

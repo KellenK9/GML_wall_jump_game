@@ -8,3 +8,4 @@ alarm[4] = 300
 
 global.game_over = false
 global.move_speed = 0.4
+global.attack_radius = 16

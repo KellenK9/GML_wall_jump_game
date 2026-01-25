@@ -163,16 +163,18 @@ if(place_meeting(x, y, obj_collision_parent) and not jumping_right and not jumpi
 	}
 }
 // Collide with enemies while running, knocking player off wall
-if(place_meeting(x, y, obj_enemy_parent) and not jumping_right and not jumping_left){
-	if(touching_left_wall){
-		jumping_right = true
-	}
-	if(touching_right_wall){
-		jumping_left = true
-	}
-}else{
-	// Collide with enemies while jumping, knocking them out of the sky
-	if(place_meeting(x, y, obj_enemy_parent)){
-		jump_speed_horizontal = jump_speed_horizontal * 0.8
+if(place_meeting(x, y, obj_enemy_parent)){
+	if(not attacking){
+		if(not jumping_right and not jumping_left){
+			if(touching_left_wall){
+				jumping_right = true
+			}
+			if(touching_right_wall){
+				jumping_left = true
+			}
+		}else{
+			// Collide with enemies while jumping, knocking them out of the sky
+			jump_speed_horizontal = jump_speed_horizontal * 0.8
+		}
 	}
 }
