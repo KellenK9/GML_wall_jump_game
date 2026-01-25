@@ -43,6 +43,8 @@
     {"id":{"name":"obj_sword","path":"objects/obj_sword/obj_sword.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_cloud","path":"sprites/spr_cloud/spr_cloud.yy",},},
+    {"id":{"name":"spr_ninja_blue_idle","path":"sprites/spr_ninja_blue_idle/spr_ninja_blue_idle.yy",},},
+    {"id":{"name":"spr_ninja_blue_run","path":"sprites/spr_ninja_blue_run/spr_ninja_blue_run.yy",},},
     {"id":{"name":"spr_ninja_start_running","path":"sprites/spr_ninja_start_running/spr_ninja_start_running.yy",},},
     {"id":{"name":"spr_ninja","path":"sprites/spr_ninja/spr_ninja.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},

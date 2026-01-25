@@ -17,6 +17,7 @@ jump_charge_speed = 0.05
 jump_vertical_speed = 3
 jump_gravity = 0.1
 vertical_speed = 0
+jump_rotation_speed = 4
 
 attacking = false
 attack_slowdown_coefficient = 5
