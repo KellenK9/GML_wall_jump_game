@@ -6,6 +6,9 @@ if(random(100) > 50){
 }else{
 	sprite_index = spr_tree2
 	image_index = irandom(2)
+	if(random(100) > 50){ // this tree sprite can be upside-down
+		image_yscale = -1
+	}
 }
 
 if(random(100) > 50){
