@@ -109,3 +109,22 @@ if(jumping_left){
 else{
 	sprite_index = spr_ninja_blue_run
 }
+// Tree pushes player down while running
+if(place_meeting(x, y, obj_tree) and not jumping_right and not jumping_left){
+	// if right above tree, move character up
+	if(not place_meeting(x, y - 8, obj_tree)){
+		for(var _i = 0; _i < 8; _i+=0.1){
+			if(place_meeting(x, y - _i, obj_tree)){
+				y = y - 0.1
+			}
+		}
+	}
+	// if right below a tree, move character down
+	if(place_meeting(x, y, obj_tree) and not place_meeting(x, y + 8, obj_tree)){
+		for(var _i = 0; _i < 8; _i+=0.1){
+			if(place_meeting(x, y + _i, obj_tree)){
+				y = y + 0.1
+			}
+		}
+	}
+}
