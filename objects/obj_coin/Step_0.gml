@@ -5,4 +5,4 @@ if(place_meeting(x, y, obj_player)){
 	instance_destroy(self)
 }
 
-y += movement_speed
+y += global.move_speed

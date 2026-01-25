@@ -1,4 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-movement_speed = 0.4
+y += global.move_speed

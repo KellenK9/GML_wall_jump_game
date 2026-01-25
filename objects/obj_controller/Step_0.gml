@@ -9,6 +9,9 @@ if(alarm[1] < 0){
 if(alarm[2] < 0){
 	alarm[2] = 600 + random(300)
 }
+if(alarm[3] < 0){
+	alarm[3] = 600 + random(60)
+}
 
 if(global.game_over and keyboard_check_pressed(vk_space)){
 	room_restart()
