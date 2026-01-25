@@ -29,7 +29,7 @@ if(keyboard_check(vk_space) and not jumping_left and not jumping_right){
 	}
 }
 //check if jumped
-if(keyboard_check_released(vk_space)){
+if(keyboard_check_released(vk_space) and not global.game_over){
 	if(touching_left_wall){
 		jumping_right = true
 		vertical_speed = jump_vertical_speed
@@ -61,7 +61,7 @@ if(jumping_right or jumping_left){
 	}
 }
 //check if attacking
-if((jumping_left or jumping_right) and keyboard_check_pressed(vk_space) and not attacking and attacks_used < max_attacks){
+if((jumping_left or jumping_right) and keyboard_check_pressed(vk_space) and not attacking and attacks_used < max_attacks and not global.game_over){
 	attacking = true
 	alarm[0] = attack_duration
 	curr_sword = instance_create_depth(x, y, -100, obj_sword)
@@ -74,4 +74,7 @@ if((jumping_left or jumping_right) and keyboard_check_pressed(vk_space) and not 
 if((jumping_left or jumping_right) and y < sprite_height/2 and vertical_speed > 0){
 	vertical_speed = 0
 }
-
+//lose when below screen
+if(y > room_height - (sprite_height/2)){
+	global.game_over = true
+}

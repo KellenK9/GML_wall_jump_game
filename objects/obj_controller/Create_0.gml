@@ -2,3 +2,5 @@
 
 score = 0
 alarm[1] = 120
+
+global.game_over = false
