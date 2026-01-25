@@ -1,5 +1,5 @@
 /// increase score
 
 if(not global.game_over){
-	score += 1
+	global.score += 1
 }

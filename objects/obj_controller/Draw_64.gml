@@ -1,6 +1,6 @@
 /// Draw Score
 
-draw_text(10, 10, score)
+draw_text(10, 10, global.score)
 
 //draw red when game over
 if(global.game_over){
