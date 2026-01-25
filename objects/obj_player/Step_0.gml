@@ -110,48 +110,48 @@ else{
 	sprite_index = spr_ninja_blue_run
 }
 // Tree pushes player down while running
-if(place_meeting(x, y, obj_tree) and not jumping_right and not jumping_left){
+if(place_meeting(x, y, obj_collision_parent) and not jumping_right and not jumping_left){
 	// if right above tree, move character up
-	if(not place_meeting(x, y - 8, obj_tree)){
+	if(not place_meeting(x, y - 8, obj_collision_parent)){
 		for(var _i = 0; _i < 8; _i+=0.1){
-			if(place_meeting(x, y - _i, obj_tree)){
+			if(place_meeting(x, y - _i, obj_collision_parent)){
 				y = y - 0.1
 			}
 		}
 	}
 	// if right below a tree, move character down
-	if(place_meeting(x, y, obj_tree) and not place_meeting(x, y + 8, obj_tree)){
+	if(place_meeting(x, y, obj_collision_parent) and not place_meeting(x, y + 8, obj_collision_parent)){
 		for(var _i = 0; _i < 8; _i+=0.1){
-			if(place_meeting(x, y + _i, obj_tree)){
+			if(place_meeting(x, y + _i, obj_collision_parent)){
 				y = y + 0.1
 			}
 		}
 	}
 }else{
 	// Tree collision while jumping
-	if(place_meeting(x, y, obj_tree)){
+	if(place_meeting(x, y, obj_collision_parent)){
 		//Bounce off tree if coming at side
-		if(jumping_left and not place_meeting(x + 8, y, obj_tree)){
+		if(jumping_left and not place_meeting(x + 8, y, obj_collision_parent)){
 			jumping_left = false
 			jumping_right = true
 			vertical_speed = jump_vertical_bounce_speed
 			attacks_used = 0
 		}
-		if(jumping_right and not place_meeting(x - 8, y, obj_tree)){
+		if(jumping_right and not place_meeting(x - 8, y, obj_collision_parent)){
 			jumping_right = false
 			jumping_left = true
 			vertical_speed = jump_vertical_bounce_speed
 			attacks_used = 0
 		}
 		// if right above tree, bounce
-		if(not place_meeting(x, y - 8, obj_tree)){
+		if(not place_meeting(x, y - 8, obj_collision_parent)){
 			vertical_speed = jump_vertical_bounce_speed
 			attacks_used = 0
 		}
 		// if right below a tree, move character down
-		if(place_meeting(x, y, obj_tree) and (not place_meeting(x, y + 16, obj_tree) or not place_meeting(x + 8, y + 8, obj_tree) or not place_meeting(x - 8, y + 8, obj_tree)) and place_meeting(x, y - 8, obj_tree) and place_meeting(x + 4, y - 4, obj_tree) and place_meeting(x - 4, y - 4, obj_tree)){
+		if(place_meeting(x, y, obj_collision_parent) and (not place_meeting(x, y + 16, obj_collision_parent) or not place_meeting(x + 8, y + 8, obj_collision_parent) or not place_meeting(x - 8, y + 8, obj_collision_parent)) and place_meeting(x, y - 8, obj_collision_parent) and place_meeting(x + 4, y - 4, obj_collision_parent) and place_meeting(x - 4, y - 4, obj_collision_parent)){
 			for(var _i = 0; _i < 8; _i+=0.1){
-				if(place_meeting(x, y + _i, obj_tree)){
+				if(place_meeting(x, y + _i, obj_collision_parent)){
 					y = y + 0.1
 				}
 			}
