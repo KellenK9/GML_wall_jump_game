@@ -145,8 +145,10 @@ if(place_meeting(x, y, obj_collision_parent) and not jumping_right and not jumpi
 		}
 		// if right above tree, bounce
 		if(not place_meeting(x, y - 8, obj_collision_parent)){
-			vertical_speed = jump_vertical_bounce_speed
-			attacks_used = 0
+			if(jump_speed_horizontal > 0.5){ // if falling, don't interact with tree
+				vertical_speed = jump_vertical_bounce_speed
+				attacks_used = 0
+			}
 		}
 		// if right below a tree, move character down
 		if(place_meeting(x, y, obj_collision_parent) and (not place_meeting(x, y + 16, obj_collision_parent) or not place_meeting(x + 8, y + 8, obj_collision_parent) or not place_meeting(x - 8, y + 8, obj_collision_parent)) and place_meeting(x, y - 8, obj_collision_parent) and place_meeting(x + 4, y - 4, obj_collision_parent) and place_meeting(x - 4, y - 4, obj_collision_parent)){
@@ -160,4 +162,17 @@ if(place_meeting(x, y, obj_collision_parent) and not jumping_right and not jumpi
 		}
 	}
 }
-//Destroy tree if hit with sword?
+// Collide with enemies while running, knocking player off wall
+if(place_meeting(x, y, obj_enemy_parent) and not jumping_right and not jumping_left){
+	if(touching_left_wall){
+		jumping_right = true
+	}
+	if(touching_right_wall){
+		jumping_left = true
+	}
+}else{
+	// Collide with enemies while jumping, knocking them out of the sky
+	if(place_meeting(x, y, obj_enemy_parent)){
+		jump_speed_horizontal = jump_speed_horizontal * 0.8
+	}
+}
