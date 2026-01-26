@@ -25,3 +25,7 @@ attack_slowdown_coefficient = 5
 attack_duration = 20
 max_attacks = 1
 attacks_used = 0
+
+playing_hum = false
+playing_fwoosh = false
+alarm[1] = 6

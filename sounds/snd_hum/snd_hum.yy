@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_coin",
+  "%Name":"snd_hum",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.776327,
-  "name":"snd_coin",
+  "duration":1.524762,
+  "name":"snd_hum",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_coin.mp3",
+  "soundFile":"snd_hum.wav",
   "type":0,
-  "volume":0.15,
+  "volume":0.3,
 }

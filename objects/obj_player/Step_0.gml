@@ -20,6 +20,7 @@ if((jumping_left and touching_left_wall) or (jumping_right and touching_right_wa
 	attacks_used = 0
 	attacking = false
 	instance_destroy(obj_sword)
+	playing_fwoosh = false
 }
 //check if charging jump
 if(keyboard_check(vk_space) and not jumping_left and not jumping_right){
@@ -27,9 +28,17 @@ if(keyboard_check(vk_space) and not jumping_left and not jumping_right){
 	if(jump_speed_horizontal > jump_speed_horizontal_max){
 		jump_speed_horizontal = jump_speed_horizontal_max
 	}
+	if(not playing_hum){
+		audio_play_sound(snd_hum, 1, false)
+		playing_hum = true
+	}
+}
+else{
+	audio_stop_sound(snd_hum)
+	playing_hum = false
 }
 //check if jumped
-if(keyboard_check_released(vk_space) and not global.game_over){
+if(keyboard_check_released(vk_space) and not global.game_over and alarm[1] < 0){
 	if(touching_left_wall){
 		jumping_right = true
 		vertical_speed = jump_vertical_speed
@@ -71,6 +80,7 @@ if((jumping_left or jumping_right) and keyboard_check_pressed(vk_space) and not 
 	if(vertical_speed > 0){
 		vertical_speed = 0
 	}
+	audio_play_sound(snd_swing_sword, 1, false)
 }
 //bump head on top of screen
 if((jumping_left or jumping_right) and y < sprite_height/2 and vertical_speed > 0){
@@ -151,6 +161,8 @@ if(place_meeting(x, y, obj_collision_parent) and not jumping_right and not jumpi
 				vertical_speed = jump_vertical_bounce_speed
 				attacks_used = 0
 				audio_play_sound(snd_bounce, 1, false)
+			}else{
+				audio_play_sound(snd_leaves, 1, false)
 			}
 		}
 		// if right below a tree, move character down
@@ -178,6 +190,10 @@ if(place_meeting(x, y, obj_enemy_parent)){
 		}else{
 			// Collide with enemies while jumping, knocking them out of the sky
 			jump_speed_horizontal = jump_speed_horizontal * 0.8
+		}
+		if(not playing_fwoosh){
+			audio_play_sound(snd_fwoosh, 1, false)
+			playing_fwoosh = true
 		}
 	}
 }
