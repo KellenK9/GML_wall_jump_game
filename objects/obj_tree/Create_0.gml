@@ -2,6 +2,8 @@
 
 buried_tree_width = 7
 depth = 550
+y = -100
+tree_transparency = 0.4
 
 if(random(100) > 50){
 	sprite_index = spr_tree1
