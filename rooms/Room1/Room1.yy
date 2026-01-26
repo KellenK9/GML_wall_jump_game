@@ -64,7 +64,7 @@
           151,129,201,205,52,-4,54,1,55,-10,-2147483648,10,227,229,52,52,53,54,53,54,151,155,-10,-2147483648,5,
           176,154,128,129,52,-3,54,2,176,180,-10,-2147483648,10,176,204,228,205,52,54,53,54,201,229,-10,-2147483648,
           1,201,-4,52,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"wall_tiles1","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"wall_tiles1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
           -4,362,1,365,-10,-2147483648,1,361,-8,362,1,365,-10,-2147483648,1,361,-8,362,1,365,-10,-2147483648,1,
           361,-8,362,1,365,-10,-2147483648,1,361,-8,362,1,365,-3,0,-7,-2147483648,1,361,-8,362,1,365,-10,-2147483648,
