@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-depth = 99
+depth = 600
 
 image_index = irandom(36)
 

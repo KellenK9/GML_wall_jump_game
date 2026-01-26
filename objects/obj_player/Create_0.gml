@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+depth = -1
+
 left_wall_x = obj_left_wall.x + (sprite_width/2)
 right_wall_x = obj_right_wall.x - (sprite_width/2)
 x = left_wall_x
