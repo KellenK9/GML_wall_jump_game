@@ -23,6 +23,7 @@ all_biomes = [
 	//layer_get_id("wall_tiles5"),
 	//layer_get_id("wall_tiles6"),
 	layer_get_id("wall_tiles7"),
+	layer_get_id("wall_tiles8"),
 ]
 
 _num_biomes = array_length(all_biomes)
