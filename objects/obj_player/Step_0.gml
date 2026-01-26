@@ -163,6 +163,9 @@ if(place_meeting(x, y, obj_collision_parent) and not jumping_right and not jumpi
 				audio_play_sound(snd_bounce, 1, false)
 			}else{
 				audio_play_sound(snd_leaves, 1, false)
+				//adding this so we bounce anyway and stop going through trees
+				vertical_speed = jump_vertical_bounce_speed
+				attacks_used = 0
 			}
 		}
 		// if right below a tree, move character down
