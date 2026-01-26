@@ -26,3 +26,15 @@ if(global.game_over and keyboard_check_pressed(vk_space)){
 	audio_stop_all()
 	room_restart()
 }
+
+// Move the wall layer continuously over time
+layer_y(curr_biome_layer, layer_get_y(curr_biome_layer) + _layer_speed)
+layer_y(next_biome_layer, layer_get_y(next_biome_layer) + _layer_speed)
+if(layer_get_y(curr_biome_layer) >= 192 - global.move_speed){
+	layer_y(curr_biome_layer, -192)
+	temp_biome_layer = curr_biome_layer
+	curr_biome_layer = next_biome_layer
+	//next_biome_layer = all_biomes[irandom(_num_biomes - 1)]
+	next_biome_layer = pick_new_biome(curr_biome_layer, temp_biome_layer, all_biomes, _num_biomes)
+}
+
