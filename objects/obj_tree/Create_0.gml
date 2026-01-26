@@ -1,6 +1,6 @@
 /// @description Choose tree type
 
-buried_tree_width = 7
+buried_tree_width = 2
 depth = 550
 y = -100
 tree_transparency = 0.4
