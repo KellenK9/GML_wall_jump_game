@@ -30,6 +30,7 @@ for(var _biome_num = 0; _biome_num < _num_biomes; _biome_num += 1){
 	biome = all_biomes[_biome_num]
 	layer_y(biome, -192)
 	layer_x(biome, 0)
+	layer_depth(biome, 500 + _biome_num);
 }
 curr_biome_layer = all_biomes[0]
 next_biome_layer = all_biomes[1 + irandom(_num_biomes - 2)]
