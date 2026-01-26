@@ -136,18 +136,21 @@ if(place_meeting(x, y, obj_collision_parent) and not jumping_right and not jumpi
 			jumping_right = true
 			vertical_speed = jump_vertical_bounce_speed
 			attacks_used = 0
+			audio_play_sound(snd_bounce, 1, false)
 		}
 		if(jumping_right and not place_meeting(x - 8, y, obj_collision_parent)){
 			jumping_right = false
 			jumping_left = true
 			vertical_speed = jump_vertical_bounce_speed
 			attacks_used = 0
+			audio_play_sound(snd_bounce, 1, false)
 		}
 		// if right above tree, bounce
 		if(not place_meeting(x, y - 8, obj_collision_parent)){
 			if(jump_speed_horizontal > 0.5){ // if falling, don't interact with tree
 				vertical_speed = jump_vertical_bounce_speed
 				attacks_used = 0
+				audio_play_sound(snd_bounce, 1, false)
 			}
 		}
 		// if right below a tree, move character down

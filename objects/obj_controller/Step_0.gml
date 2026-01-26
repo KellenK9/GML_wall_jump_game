@@ -16,6 +16,12 @@ if(alarm[4] < 0){
 	alarm[4] = 200 + random(300)
 }
 
+if(global.game_over and not game_over_sound_played){
+	audio_play_sound(snd_game_over, 1, false)
+	game_over_sound_played = true
+}
+
 if(global.game_over and keyboard_check_pressed(vk_space)){
+	audio_stop_all()
 	room_restart()
 }

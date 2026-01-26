@@ -9,6 +9,7 @@ if(obj_player.attacking and distance_to_point(obj_player.x, obj_player.y) < glob
 	}else{
 		global.score += 500
 	}
+	audio_play_sound(snd_pop, 1, false)
 	instance_destroy(self)
 }
 
