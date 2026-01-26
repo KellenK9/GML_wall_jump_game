@@ -17,6 +17,7 @@ if(alarm[4] < 0){
 }
 
 if(global.game_over and not game_over_sound_played){
+	audio_stop_sound(snd_game_music)
 	audio_play_sound(snd_game_over, 1, false)
 	game_over_sound_played = true
 }

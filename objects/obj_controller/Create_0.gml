@@ -11,3 +11,5 @@ global.move_speed = 0.4
 global.attack_radius = 16
 
 game_over_sound_played = false
+
+audio_play_sound(snd_game_music, 1, true)
