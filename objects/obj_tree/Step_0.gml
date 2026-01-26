@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+depth = 550
+
 y += global.move_speed
 
 if(y > room_height + sprite_height + 200){

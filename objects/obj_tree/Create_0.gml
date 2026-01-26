@@ -1,5 +1,8 @@
 /// @description Choose tree type
 
+buried_tree_width = 7
+depth = 550
+
 if(random(100) > 50){
 	sprite_index = spr_tree1
 	image_index = irandom(3)
@@ -13,5 +16,8 @@ if(random(100) > 50){
 
 if(random(100) > 50){
 	image_xscale = -1
-	x = obj_right_wall.x
+	x = obj_right_wall.x + buried_tree_width
+}
+else{
+	x = obj_left_wall.x - buried_tree_width
 }

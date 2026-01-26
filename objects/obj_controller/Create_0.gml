@@ -17,11 +17,11 @@ audio_play_sound(snd_game_music, 1, true)
 _layer_speed = global.move_speed
 all_biomes = [
 	layer_get_id("wall_tiles1"),
-	layer_get_id("wall_tiles2"),
-	layer_get_id("wall_tiles3"),
+	//layer_get_id("wall_tiles2"),
+	//layer_get_id("wall_tiles3"),
 	layer_get_id("wall_tiles4"),
-	layer_get_id("wall_tiles5"),
-	layer_get_id("wall_tiles6"),
+	//layer_get_id("wall_tiles5"),
+	//layer_get_id("wall_tiles6"),
 	layer_get_id("wall_tiles7"),
 ]
 
