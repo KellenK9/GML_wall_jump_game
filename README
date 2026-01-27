@@ -6,8 +6,20 @@ light thump when player hits wall
 animations:
 red warning for coming trees
 parallax background
+number of points gained from coins and birds
 
 features:
 couch multiplayer
     allow defeated players to interact with the level
-title screen
+improve title screen
+high score
+
+ui:
+create font for game over and score
+
+gameplay:
+don't restart game so quickly
+ninja stands still for a few frames before running
+
+bugs:
+ninja sometimes falls through trees
